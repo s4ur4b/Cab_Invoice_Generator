@@ -10,19 +10,6 @@ public class FareCalculator {
     public void addRide(){
         Scanner scan = new Scanner(System.in);
 
-//        Ride ride1 = new Ride();
-//        ride1.distance = 15;
-//        ride1.time = 60;
-//        rideList.add(ride1);
-//        Ride ride2 = new Ride();
-//        ride2.distance = 7;
-//        ride2.time = 50;
-//        rideList.add(ride2);
-//        Ride ride3 = new Ride();
-//        ride3.distance = 26;
-//        ride3.time = 128;
-//        rideList.add(ride3);
-
         int EXIT = 2;
         int choice = 0;
         while (choice != EXIT){
@@ -53,6 +40,11 @@ public class FareCalculator {
         }
         totalFare += fare;
         }
+        double averageFarePerRide = totalFare/rideList.size();
+        System.out.println("INVOICE:");
+        System.out.println("Total Number Of Rides: "+rideList.size());
         System.out.println("Total Aggregate Fare: "+totalFare+" Rs/-");
+        System.out.println("Average Fare Per Ride: "+averageFarePerRide+" Rs/-");
+
     }
 }
